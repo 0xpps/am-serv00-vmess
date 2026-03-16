@@ -31,12 +31,6 @@ echo "╔═══════════════════════�
 echo "║   🚀 数字套利 Cloudflare Argo 安装器        ║"
 echo "╚══════════════════════════════════════════╝"
 echo -e "${re}"
-
-printf "%-18s ${yellow}%s${re}\n"  "${green}📺 YouTube频道："   "https://youtube.com/@am_clubs"
-printf "%-18s ${yellow}%s${re}\n"  "${green}💬 TG交流群组："    "https://t.me/am_clubs"
-printf "%-18s ${yellow}%s${re}\n"  "${green}💻 GitHub仓库："    "https://github.com/amclubs"
-printf "%-18s ${yellow}%s${re}\n"  "${green}🌐 个人博客："      "https://amclubss.com"
-
 echo -e "${cyan}──────────────────────────────────────────${re}"
 
 # 菜单主体
@@ -341,11 +335,11 @@ info "生成配置文件：$CONFIG_FILE"
 						https) SERVICE="https://localhost:${PORT}" ;;
 				esac
 
-				echo "  - hostname: ${HOST}"
+				echo " - hostname: \"${HOST}\""
 				echo "    service: ${SERVICE}"
 				echo "    originRequest:"
 				echo "      noTLSVerify: true"
-				echo "      httpHostHeader: ${HOST}"
+				echo "      httpHostHeader: \"${HOST}\""
 
 				# WebSocket 模式添加 headers
 				if [ "$STREAM_TYPE" = "ws" ] && { [ "$PROTO" = "http" ] || [ "$PROTO" = "https" ]; }; then
