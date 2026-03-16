@@ -335,11 +335,11 @@ info "生成配置文件：$CONFIG_FILE"
 						https) SERVICE="https://localhost:${PORT}" ;;
 				esac
 
-				echo " - hostname: \"${HOST}\""
+				echo '  - hostname: "'"${HOST}"'"'
 				echo "    service: ${SERVICE}"
 				echo "    originRequest:"
 				echo "      noTLSVerify: true"
-				echo "      httpHostHeader: \"${HOST}\""
+				echo '      httpHostHeader: "'"${HOST}"'"'
 
 				# WebSocket 模式添加 headers
 				if [ "$STREAM_TYPE" = "ws" ] && { [ "$PROTO" = "http" ] || [ "$PROTO" = "https" ]; }; then
